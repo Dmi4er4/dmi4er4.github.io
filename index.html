@@ -1,2 +1,77 @@
-<div id='allanecdots'></div>
-<a href="https://allanecdots.ru/" target="_blank">Свежие анекдоты</a>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великий Оракул Шуток</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .joke-button {
+            background-color: #ff5c5c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .joke {
+            font-size: 1.2em;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Великий Оракул Шуток</h1>
+</header>
+
+<section>
+    <p class="joke">Нажми на кнопку ниже, чтобы получить порцию веселья!</p>
+    <button class="joke-button" onclick="tellJoke()">Получить Шутку</button>
+</section>
+
+<script>
+    const jokes = [
+        "Почему петухи так рано просыпаются? Потому что они на ногах раньше, чем их перья!",
+        "Как заставить артиста посмеяться до упаду? Расскажите ему свою мечту стать успешным художником!",
+        "Почему рыбы всегда знают математику? Потому что они находятся в школе!",
+        "Зачем компьютеры такие хладнокровные? Потому что у них есть много байтов!",
+        "Почему скелеты всегда такие спокойные? Потому что у них ничто не прыгает в лодыжках!"
+    ];
+
+    function tellJoke() {
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+        const jokeElement = document.querySelector('.joke');
+        jokeElement.textContent = jokes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
